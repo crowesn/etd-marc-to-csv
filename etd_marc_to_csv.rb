@@ -51,7 +51,7 @@ end
 reader = MARC::Reader.new(marc_file)
 
 # instantiate csv output file
-csv = CSV.open( output_file, "wb" )
+csv = CSV.open( output_file, { col_sep: "\t" } "wb" )
 
 # add headers
 csv << headers
